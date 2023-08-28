@@ -1,0 +1,28 @@
+ALGORITHM IsPalindrome
+VAR
+    str,s:STRING;
+    i:INTEGER; 
+BEGIN
+
+  FOR i FROM 0 TO string.length STEP 1  DO
+     IF (string[i]!==' ') THEN
+         str:=str.concat('',string[i])
+     END_IF
+  END_FOR
+ str=str.toLowerCase()
+//after these tow steps (the for loop and toLowerCase() instruction) 
+
+IF (str.length===0) THEN
+    return (true)
+END_IF
+  IF (str.length===1)  THEN
+   return(true)
+  END_IF
+  
+   IF (str[str.length-1]===str[0]) THEN
+     s=str.substring(1, str.length-1)
+       return palindrome(s)
+   ELSE
+    return false
+   END_IF      
+END
